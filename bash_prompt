@@ -1,8 +1,0 @@
-# get the current GIT branch for the current directory
-parse_git_branch() {
-  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
-}
-
-# Format the prompt with "user@host path (git branch)"
-export PS1="\[\e[34m\]\u@\h \[\e[36m\]\w \[\e[91m\]\$(parse_git_branch)\[\e[00m\]$ "
-
