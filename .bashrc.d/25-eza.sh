@@ -1,7 +1,9 @@
 # eza (a better ls)
-
-if [ -x /usr/bin/eza ]; then
+EZA=$(which eza)
+if [ -x "$EZA" ] && [ -n "$EZA" ]; then
   alias ls='eza'
   alias ll='eza -al'
+else
+  alias ll='ls -al'
 fi
 
