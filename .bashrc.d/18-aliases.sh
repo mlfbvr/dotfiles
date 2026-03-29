@@ -6,5 +6,5 @@ if [ -x /usr/bin/dircolors ]; then
   alias egrep='egrep --color=auto'
 fi
 
-alias xfk='/usr/bin/xmodmap /home/martin/.Xmodmap'
+alias xfk='/usr/bin/xmodmap ${HOME}/.Xmodmap'
 

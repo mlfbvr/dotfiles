@@ -20,5 +20,3 @@ shopt -s globstar
 
 # Set the timezone to UTC
 export TZ=UTC
-
-export PATH=${PATH}:~/.bin/

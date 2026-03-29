@@ -5,26 +5,7 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-" Plugins
-call plug#begin('~/.vim/plugged')
-Plug 'joshdick/onedark.vim'
-Plug 'preservim/nerdtree'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-Plug 'pangloss/vim-javascript'    " JavaScript support
-Plug 'leafgarland/typescript-vim' " TypeScript syntax
-Plug 'maxmellon/vim-jsx-pretty'   " JS and JSX syntax
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'jiangmiao/auto-pairs'
-Plug 'diepm/vim-rest-console'
-Plug 'vim-test/vim-test'
-Plug 'prisma/vim-prisma'
-Plug 'prettier/vim-prettier', { 'do': 'npm install --omit dev --legacy-peer-deps' }
-Plug 'preservim/nerdtree' |
-            \ Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'github/copilot.vim'
-Plug '907th/vim-auto-save'
-call plug#end()
+source ~/.vimrc-plugins
 
 syntax on
 colorscheme onedark
