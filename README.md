@@ -28,5 +28,6 @@ then symlinks the following packages to `$HOME`:
 | `bashfetch.sh` | Display system info (OS, kernel, CPU, GPU, WM, resolutions) | `xrandr`, `lspci`, `lsb-release` |
 | `generators/create-fastapi-project.sh` | Scaffold a FastAPI project with venv, deps, and a hello-world route | `python3` |
 | `generators/create-react-project.sh` | Scaffold a React + TypeScript + Vite project | `pnpm` |
+| `perl/rtm.pl` | Remember The Milk CLI — add/view tasks in a list | Core Perl modules, env vars |
 
 
