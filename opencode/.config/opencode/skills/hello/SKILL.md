@@ -2,6 +2,7 @@
 name: hello
 description: Hello World skill
 compatibility: opencode
+command: hello
 ---
 
 ## What I do

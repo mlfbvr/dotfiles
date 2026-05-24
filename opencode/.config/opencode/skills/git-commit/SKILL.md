@@ -2,6 +2,7 @@
 name: git-commit
 description: Create consistent git commits
 compatibility: opencode
+command: git-commit
 ---
 
 ## What I do

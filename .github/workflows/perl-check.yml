@@ -1,0 +1,22 @@
+name: Perl Syntax Check
+
+on:
+  push:
+    paths:
+      - 'scripts/perl/**/*.pl'
+  pull_request:
+    paths:
+      - 'scripts/perl/**/*.pl'
+
+jobs:
+  syntax-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run perl -c on all Perl scripts
+        run: |
+          for f in scripts/perl/*.pl; do
+            echo "Checking $f..."
+            perl -c "$f"
+          done
