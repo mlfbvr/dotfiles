@@ -19,6 +19,26 @@ then symlinks the following packages to `$HOME`:
 | `tmux`  | `.tmux.conf` |
 | `vim`   | `.vimrc`, `.vimrc-plugins`, `.vimrc-mappings` |
 
+## Additional configurations
+
+These packages are present in the repo but not managed by `setup.sh`.
+
+| Package | Links | Command |
+|---------|-------|---------|
+| `i3` | `~/.config/i3/config`, `~/.config/i3status/config` | `stow -t ~ i3` |
+
+## opencode
+
+Configuration for the [opencode](https://opencode.ai) CLI tool.
+
+### Setup
+
+```bash
+# Installation: see https://opencode.ai for instructions
+mkdir -p ~/.config/opencode/{agents,skills}
+stow -t ~ --no-folding opencode
+```
+
 ## Scripts
 
 | Script | Description | Requirements |
@@ -28,6 +48,8 @@ then symlinks the following packages to `$HOME`:
 | `bashfetch.sh` | Display system info (OS, kernel, CPU, GPU, WM, resolutions) | `xrandr`, `lspci`, `lsb-release` |
 | `generators/create-fastapi-project.sh` | Scaffold a FastAPI project with venv, deps, and a hello-world route | `python3` |
 | `generators/create-react-project.sh` | Scaffold a React + TypeScript + Vite project | `pnpm` |
+| `perl/find_duplicates.pl` | Find duplicate files in current directory by MD5 checksum | Core Perl modules |
+| `perl/login.pl` | Display login message with mail status and date/time | Core Perl modules |
 | `perl/rtm.pl` | Remember The Milk CLI — add/view tasks in a list | Core Perl modules, env vars |
 
 
