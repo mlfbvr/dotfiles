@@ -51,5 +51,6 @@ stow -t ~ --no-folding opencode
 | `perl/find_duplicates.pl` | Find duplicate files in current directory by MD5 checksum | Core Perl modules |
 | `perl/login.pl` | Display login message with mail status and date/time | Core Perl modules |
 | `perl/rtm.pl` | Remember The Milk CLI — add/view tasks in a list | Core Perl modules, env vars |
+| `perl/download_organizer.pl` | Sort downloads into category folders by file extension | Core Perl modules, env vars |
 
 
