@@ -27,5 +27,8 @@ jobs:
       - name: Count the files
         run: find . -type f | wc -l
       - name: Testing step
+        env:
+          MESSAGE: "Hello World"
         run: |
-          echo "message=HelloWorld" >> "$GITHUB_OUTPUT"
+          echo "$MESSAGE"
+          echo "env_passthrough=message=$MESSAGE" >> "$GITHUB_OUTPUT"
