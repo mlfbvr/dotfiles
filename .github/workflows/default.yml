@@ -25,3 +25,6 @@ jobs:
 
       - name: Count the files
         run: find . -type f | wc -l
+      - name: Testing step
+        run: |
+          echo "Hello World" >> "$GITHUB_OUTPUT"
