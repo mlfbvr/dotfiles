@@ -28,4 +28,4 @@ jobs:
         run: find . -type f | wc -l
       - name: Testing step
         run: |
-          echo "Hello World" >> "$GITHUB_OUTPUT"
+          echo "message=HelloWorld" >> "$GITHUB_OUTPUT"
