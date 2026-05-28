@@ -26,3 +26,6 @@ jobs:
 
       - name: Count the files
         run: find . -type f | wc -l
+
+      - name: env
+        run: env
