@@ -27,7 +27,5 @@ jobs:
       - name: Count the files
         run: find . -type f | wc -l
       - name: Testing step
-        env:
-          message: ${{ secrets.CF_MESSAGE }}
         run: |
-          echo "env_passthrough=message=${{ secrets.CF_MESSAGE }}" >> "$GITHUB_OUTPUT"
+          echo "env_passthrough=message=${{ secrets.CF_MESSAGE }} hello=world" >> "$GITHUB_OUTPUT"
