@@ -1,6 +1,6 @@
 # bat (a better cat)
-
-if [ -x /usr/bin/batcat ]; then
+BATCAT=$(which batcat)
+if [ -x "$BATCAT" ] && [ -n "$BATCAT" ]; then
   alias cat='batcat'
 fi
 
