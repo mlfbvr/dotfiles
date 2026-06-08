@@ -6,23 +6,27 @@ JOE=$(which joe)
 NANO=$(which nano)
 
 if [ -n "$VIM" ] && [ -x "$VIM" ]; then
-  echo "Default Editor: ${VIM}"
+  if [ -t 0 ]; then echo "Default Editor: ${VIM}"; fi
   export EDITOR=${VIM}
   export VISUAL=${VIM}
+  alias v='vim'
 elif [ -n "$VI" ] && [ -x "$VI" ]; then
-  echo "Default Editor: ${VI} :\\"
+  if [ -t  0 ]; then echo "Default Editor: ${VI} :\\"; fi
   export EDITOR=${VI}
   export VISUAL=${VI}
+  alias v='vi'
 elif [ -n "$JOE" ] && [ -x "$JOE" ]; then
-  echo "Default Editor: ${JOE} :/"
+  if [ -t  0 ]; then echo "Default Editor: ${JOE} :/"; fi
   export EDITOR=${JOE}
   export VISUAL=${JOE}
+  alias v='joe'
 elif [ -n "$NANO" ] && [ -x "$NANO" ]; then
-  echo "Default Editor: ${NANO} :("
+  if [ -t  0 ]; then echo "Default Editor: ${NANO} :("; fi
   export EDITOR=${NANO}
   export VISUAL=${NANO}
+  alias v='nano'
 else
-  echo "No known editor installed (x_x)"
+  if [ -t  0 ]; then echo "No known editor installed (x_x)"; fi
   unset EDITOR
   unset VISUAL
 fi
