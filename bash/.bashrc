@@ -5,10 +5,3 @@ if [ -d "$HOME/.bashrc.d" ]; then
     done
 fi
 
-# pnpm
-export PNPM_HOME="/home/martin/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
