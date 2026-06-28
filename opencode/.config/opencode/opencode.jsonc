@@ -1,0 +1,14 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "autoupdate": true,
+  "model": "opencode/big-pickle",
+  "server": {
+    "port": 4096
+  },
+  "agent": {
+    "explore": {
+      "enabled": true,
+      "model": "deepseek/deepseek-v4-flash"
+    }
+  }
+}
