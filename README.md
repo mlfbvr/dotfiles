@@ -35,7 +35,7 @@ Configuration for the [opencode](https://opencode.ai) CLI tool.
 
 ```bash
 # Installation: see https://opencode.ai for instructions
-mkdir -p ~/.config/opencode/{agents,skills}
+mkdir -p ~/.config/opencode/agents
 stow -t ~ --no-folding opencode
 ```
 
