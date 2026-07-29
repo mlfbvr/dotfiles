@@ -8,7 +8,7 @@ if [ -t 0 ]; then
   # Only run if the figlet command is available
   if ! command -v figlet &> /dev/null
   then
-      exit
+      return
   fi 
 
   # Get the username of the logged in username
